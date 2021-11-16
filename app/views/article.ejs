@@ -1,0 +1,108 @@
+<%- include('./partial/header'); %>
+
+  
+ 
+
+  <!-- Navigation -->
+  
+  <%- include('./partial/leftMenu'); %>
+
+  
+  <!-- Page Content -->
+
+      <!-- /.col-lg-3 -->
+
+      <article class="col-lg-9">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img class="" src="/images/<%= boiteDetail.name.toLowerCase() %>.png" alt="">
+          </div>
+
+          <header class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                  <h2 class="h3 d-inline-block card-title">
+                    <%= boiteDetail.name %></h2>
+
+                    <h3 class="badge badge-pill badge-<%= boiteDetail.category.toLowerCase() %>"><%= boiteDetail.category %></h3>
+                  
+                  <p class="card-text">Taille réelle : <%= boiteDetail.size %>cm</p>
+                  <p class="card-text"><%= boiteDetail.description %></p>
+                  <p class="card-text">
+                    Note moyenne : &#9733; &#9733; &#9733; &#9733; &#9734;
+                    <br>
+                    <a href="#" data-toggle="modal" data-target="#reviewsModal">Détails des avis</a>
+                  </p>
+                  <h5>$<%= boiteDetail.price %></h5>
+                  <p class="card-text">
+                    <a href="/bookmarks/add/<%= boiteDetail.id %>" class="link-add-bookmarks">+ Ajouter au panier</a>
+                  </p>
+              </div>
+            </div>
+          
+          </header>
+
+        </div>
+        <!-- /.row -->
+
+      </article>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <%- include('./partial/footer'); %>
+
+  <!-- Modale des avis -->
+  <div class="modal fade" id="reviewsModal" tabindex="-1" role="dialog" aria-labelledby="reviewsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="reviewsModalLabel">Avis des internautes</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <% for (const iteratorReview of review){ %> 
+          <section>
+            <h5><%= iteratorReview.title %> &nbsp; <small class="text-muted">
+              
+              <% for (let note = 1; note <=5; note++) { %>
+                <% if (note <= iteratorReview.note) { %>
+                  &#9733; 
+                <% } else { %>
+                  &#9734; 
+                <% } %>
+            <% } %>
+
+            </small></h5>
+            <p class="review-author"><%= iteratorReview.author %></p>
+            <p><%= iteratorReview.message %></p>
+          </section>
+
+          <hr>
+          <% } %>
+          
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.15/bootstrap-native-v4.min.js"></script>
+
+</body>
+
+</html>

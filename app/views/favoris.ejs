@@ -1,0 +1,60 @@
+<%- include('./partial/header'); %>
+
+  <!-- Navigation -->
+  <%- include('./partial/leftMenu'); %>
+
+  <!-- Page Content -->
+  <div class="container container-main">
+
+      <div class="row">
+        <div class="col">
+          <h3 class="text-center">Votre liste de préférences</h3>
+
+          <table class="table">
+            <thead>
+              <th>Article</th>
+              <th>Prix HT</th>
+              <th></th>
+            </thead>
+            <tbody>
+
+              <% for (const iteratorFavoris of favoris) { %>
+
+              <tr>
+                <td>
+                  <img class="img-thumbnail img-cart-list" src="/images/<%= iteratorFavoris.name.toLowerCase() %>.png" alt="">
+                  <div class="item-description">
+                      <h5 class="item-title"><%= iteratorFavoris.name %></h5>
+                  </div>
+                </td>
+
+                <td>
+                  <p class="item-subtotal">$<%= iteratorFavoris.price %></p>
+                </td>
+
+                <td>
+                  <a href="/bookmarks/delete/<%= iteratorFavoris.id %>">Enlever de la liste</a>
+                </td>
+              </tr>
+              <% } %>
+
+              
+
+          </table>
+
+          <div class="row">
+            <div class="col text-right">
+                <a class="btn btn-success" href="/">
+                  Retour à l'accueil
+                </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </div>
+
+
+  <!-- Footer -->
+  <%- include('./partial/footer'); %>
+  

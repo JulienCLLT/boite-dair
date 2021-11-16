@@ -1,0 +1,57 @@
+<%- include('./partial/header'); %>
+
+  <!-- Navigation -->
+  
+  <%- include('./partial/leftMenu'); %>
+  <!-- Page Content -->
+
+      <!-- /.col-lg-3 -->
+
+      <section class="col-lg-9">
+
+        <div class="row">
+
+
+          <% for (const iteratorInfo of info) { %>
+
+           <article class="col-lg-4 col-md-6 mb-4" itemscope itemtype="https://schema.org/Product">
+              <div class="card h-100">
+                <a href="/article/<%= iteratorInfo.id %>" itemprop="url">
+                  <img class="card-img-top" src="./images/<%= iteratorInfo.name.toLowerCase() %>.png" alt="">
+                  <h3 class="badge-category badge badge-pill badge-<%= iteratorInfo.category.toLowerCase() %>" itemprop="category"> <%= iteratorInfo.category %> </h3>
+                </a>
+                <div class="card-body">
+                  <h2 class="h4 card-title">
+                    <a href="/article/<%= iteratorInfo.id %>"><%= iteratorInfo.name %></a>
+                  </h2>
+                  <div class="h5">$<%= iteratorInfo.price %></div>
+                  <p class="card-text"><%= iteratorInfo.description %></p>
+                </div>
+                <div class="card-footer">
+                  <span class="small text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                  <a href="/bookmarks/add/<%= iteratorInfo.id %>" class="link-add-bookmarks">+ Ajouter aux favoris</a>
+                </div>
+              </div>
+          </article>
+
+            <% } %>
+
+
+
+
+          
+
+        </div>
+        <!-- /.row -->
+
+      </section>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <%- include('./partial/footer'); %>
