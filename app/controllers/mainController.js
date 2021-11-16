@@ -28,7 +28,7 @@ const mainController = {
           if (error){
             console.log(error);
           }else{
-            // console.log(data.rows);
+            
             response.render("accueil", {info :data.rows });
           }
         }
@@ -60,18 +60,16 @@ const mainController = {
               message: elem.message,
             })
           });
+          
+          const boiteDetail = data.rows[0];
 
-          const figurineDetail = data.rows[0];
-
-          delete figurineDetail.author;
-          delete figurineDetail.note;
-          delete figurineDetail.title;
-          delete figurineDetail.message;
+          delete boiteDetail.author;
+          delete boiteDetail.note;
+          delete boiteDetail.title;
+          delete boiteDetail.message;
 
           
-
-          
-          response.render("article", { figurineDetail, review });
+          response.render("article", { boiteDetail, review });
           
         }
       }

@@ -3,7 +3,7 @@ const client = require('./database');
 const dataMapper = {
 
     getAllFigurines : (callback)=> {
-        const queryAllFigurines = 'SELECT * FROM figurine ;';
+        const queryAllFigurines = 'SELECT * FROM boite';
         client.query(queryAllFigurines, callback);
 
     },
@@ -12,9 +12,9 @@ const dataMapper = {
         
         // client.query(`SELECT * FROM figurine WHERE id= $1`, [id], callback);
         const oneFigurineQuery = {
-            text: `SELECT * FROM figurine
-                JOIN review ON figurine.id = review.figurine_id
-                WHERE figurine.id = $1;`,
+            text: `SELECT * FROM boite
+                JOIN review ON boite.id = review.boite_id
+                WHERE boite.id = $1;`,
             values: [id]
         };
         client.query(oneFigurineQuery, callback);
@@ -26,8 +26,8 @@ const dataMapper = {
         const countQuery = {
             text : `SELECT 
                         category, 
-                        COUNT(category) AS nbfigurines 
-                    FROM figurine 
+                        COUNT(category) AS nbBoites 
+                    FROM boite 
                     GROUP BY category;`,
         };
         client.query(countQuery, callback);

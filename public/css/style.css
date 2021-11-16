@@ -107,6 +107,7 @@ table.table tbody tr td {
 }
 
 
+
 /* Modal breakpoint is awful in bootstrap */
 @media (min-width: 576px) {
   .modal-dialog {

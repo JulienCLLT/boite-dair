@@ -43,19 +43,19 @@ CREATE TABLE IF NOT EXISTS "review" (
 );
 
 INSERT INTO "review" ("id", "author", "note", "title", "message", "boite_id") VALUES
-(1,'Jean Claude Dus',4, 'Une belle boite', 'La finition est bien, le rose est vraiment rose. Seul bémol, le livreur a abimé la main droite.' ,1),
-(2,'Thérèse de Monsou',2, 'Bof Bof...', 'La boite ne tient pas debout seule. Certains détails sont mal finis, comme les bracelets.' ,1),
-(3,'Monsieur Preskovitch',5, 'Juste parfait', 'C''est tellement parfait, on dirait que c''est roulé à la main sous les aisselles.' ,1),
+(1,'Jean Claude Dus',4, 'Une belle boite', 'La finition est bien, Seul bémol, le livreur a abimé la boite.' ,1),
+(2,'Thérèse de Monsou',2, 'Bof Bof...', 'La boite ne tient pas debout seule. Certains détails sont mal finis.' ,1),
+(3,'Monsieur Preskovitch',5, 'Juste parfaite', 'C''est tellement parfait, on dirait que c''est roulé à la main sous les aisselles.' ,1),
 
 (4,'Barbapapix',5, 'Parfait', 'Un niveau de détail bluffant. A se procurer absolument si vous êtes collectionneurs.' ,2),
 (5,'Fabrice',4, 'Très bien', 'Le rapport qualité prix est plus que bien, le prix est vraiment bas pour cette boite de qualité.' ,2),
-(6,'Thomas',1, 'Déçu', 'Trop de défaut de peintures... A éviter' ,2),
+(6,'Thomas',1, 'Déçu', 'Trop de défaut... A éviter' ,2),
 
-(7,'Lydie',5, 'Parfaite', 'Magnifique statuette de qualité du plus bel effet dans ma vitrine. Le rendu des couleurs est vraiment magnifique.' ,3),
-(8,'Aurore',3, 'Belle mais...', 'La boite n''est pas stable, la faute à un socle trop cheap.' ,3),
-(9,'Maman Gato',4, 'Contente de mon achat', 'Belles finitions, beau mouvement. La boite est stable. Mon fils est ravi.' ,3),
+(7,'Lydie',5, 'Parfaite', 'Magnifique boite de qualité du plus bel effet dans ma vitrine. Le rendu des couleurs est vraiment magnifique.' ,3),
+(8,'Aurore',3, 'Belle mais...', 'La boite n''est pas stable' ,3),
+(9,'Maman Gato',4, 'Contente de mon achat', 'Belles finitions, belle odeur. Mon fils est ravi.' ,3),
 
-(10,'Victor',4, 'Satisfait', 'Bien protégé par du papier bulle et arrivé dans son carton d''origine. boite superbe et bien grande.' ,4),
+(10,'Victor',4, 'Satisfait', 'Bien protégé par du papier bulle et arrivé dans son carton d''origine. boite superbe.' ,4),
 (11,'Jean-André',5,'Superbe','Bonne boite je recommande' ,4),
 
 (12,'Céline',5, 'Magnifique', 'Je trouve cette boite magnifique. Le sens du détail est là, j''ai beau cherché des endroits ou la finition aurai été bâclés, je n''en trouve pas.' ,5),
@@ -64,4 +64,4 @@ INSERT INTO "review" ("id", "author", "note", "title", "message", "boite_id") VA
 
 (15,'Magalie',1, 'Un ratâge !', 'Les proportions ne correspondent pas à la photo. Très déçue.' ,6),
 (16,'Antoinette',0, 'A éviter !', 'La boite est arrivée cassée ! Malgré les réparations, elle reste moche.' ,6),
-(17,'Vincent',2, 'Assez décu', 'Malheureusement, la boite ne représente pas fidèlement le personnage.' ,6);
+(17,'Vincent',2, 'Assez décu', 'Malheureusement, la boite ne resiste pas au seisme.' ,6);
