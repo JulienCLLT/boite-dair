@@ -4,14 +4,28 @@ const dataMapper = require('../dataMapper');
 
 const bookmarksController = {
 
-  tva: 10,
+  tva: 20,
   shipping: 5,
-  
+
   // méthode pour afficher le panier
   bookmarksPage: (request, response) => {
 
-    console.log(request.session.bookmarks);
-    response.render("favoris",{favoris : request.session.bookmarks});
+    const favoris = request.session.bookmarks;
+    let priceArray = [];
+
+    if (favoris.length>1) {
+      const priceItem = favoris.reduce((a, b) => (a.price + b.price));
+      const ItemWithTva = ((priceItem/100)*bookmarksController.tva)+priceItem;
+      const ItemWithTvaShipping = ItemWithTva+bookmarksController.shipping;
+
+      priceArray.push({priceItem, ItemWithTva, ItemWithTvaShipping});
+      
+      };
+
+    console.log(favoris);
+    console.log(priceArray);
+    
+    response.render("favoris",{favoris : favoris});
   },
 
   bookmarksAddFigurine: (request, response)=>{
