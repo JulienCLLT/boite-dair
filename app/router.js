@@ -19,6 +19,8 @@ router.get('/bookmarks', mainController.leftMenu, bookmarksController.bookmarksP
 router.get('/bookmarks/add/:id',bookmarksController.bookmarksAddFigurine);
 router.get('/bookmarks/delete/:id',bookmarksController.bookmarksDeleteFigurine);
 
+router.get('/contact', mainController.contactPage)
+
 
 // on exporte le router 
 module.exports = router;

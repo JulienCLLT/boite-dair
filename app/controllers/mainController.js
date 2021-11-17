@@ -19,7 +19,9 @@ const mainController = {
     })
   },
 
-
+  contactPage : (request, response) => {
+    response.render('contact')
+  },
 
   // méthode pour la page d'accueil
   homePage: (request, response) => {

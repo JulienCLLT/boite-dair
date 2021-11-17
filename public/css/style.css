@@ -110,6 +110,15 @@ table.table tbody tr td {
   margin-left: 15px;
 }
 
+.carrouselContact {
+  width: 50%;
+  
+}
+
+.carousel-item {
+  width: 100%;
+  height: auto;
+}
 
 
 /* Modal breakpoint is awful in bootstrap */
