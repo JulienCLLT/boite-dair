@@ -7,9 +7,8 @@ const bookmarksController = {
 
   // méthode pour afficher le panier
   bookmarksPage: (request, response) => {
-    // if (!request.session.bookmarks) {
-    //   request.session.bookmarks = [];
-    // } plus utile on a cree cette verife avec un middleware avant router
+
+    console.log(request.session.bookmarks);
     response.render("favoris",{favoris : request.session.bookmarks});
   },
 
@@ -22,9 +21,6 @@ const bookmarksController = {
           
         }else {
 
-            // if (!request.session.bookmarks) {
-            //   request.session.bookmarks = [];
-            //} plus utile on a cree cette verife avec un middleware avant router
             const checkFigurine = request.session.bookmarks.find(element =>element.id == figurineID);
               if (!checkFigurine) {
                 request.session.bookmarks.push(data.rows[0]);
@@ -59,7 +55,7 @@ const bookmarksController = {
   bookmarksDeleteFigurine: (request, response)=>{
     const figurineID = request.params.id;
 
-    request.session.bookmarks =request.session.bookmarks.filter((fig) => {
+    request.session.bookmarks = request.session.bookmarks.filter((fig) => {
           return (fig.id != figurineID)
     });
     response.redirect("/bookmarks");

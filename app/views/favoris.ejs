@@ -22,9 +22,12 @@
 
               <tr>
                 <td>
-                  <img class="img-thumbnail img-cart-list" src="/images/<%= iteratorFavoris.name.toLowerCase() %>.png" alt="">
+                  <img class="img-thumbnail img-cart-list" src="/images/<%= iteratorFavoris.name.toLowerCase()%>/<%= iteratorFavoris.name.toLowerCase()+1%>.jpg" alt="">
                   <div class="item-description">
-                      <h5 class="item-title"><%= iteratorFavoris.name %></h5>
+                      <h5 class="item-title"> 
+                        <a href="/article/<%= iteratorFavoris.id %>"><%= iteratorFavoris.name %> </a>
+                        
+                      </h5>
                   </div>
                 </td>
 

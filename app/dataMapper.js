@@ -10,7 +10,7 @@ const dataMapper = {
 
     getOneFigurine: (id, callback)=> { 
         
-        // client.query(`SELECT * FROM figurine WHERE id= $1`, [id], callback);
+
         const oneFigurineQuery = {
             text: `SELECT * FROM boite
                 JOIN review ON boite.id = review.boite_id
