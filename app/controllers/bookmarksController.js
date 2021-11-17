@@ -1,10 +1,12 @@
 const { request, response } = require('express');
 const dataMapper = require('../dataMapper');
 
-const path = require('path');
 
 const bookmarksController = {
 
+  tva: 10,
+  shipping: 5,
+  
   // méthode pour afficher le panier
   bookmarksPage: (request, response) => {
 

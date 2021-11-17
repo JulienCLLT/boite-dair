@@ -30,7 +30,6 @@ const mainController = {
           if (error){
             console.log(error);
           }else{
-            
             response.render("accueil", {info :data.rows });
           }
         }

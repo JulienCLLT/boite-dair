@@ -8,6 +8,7 @@ const dataMapper = {
 
     },
 
+
     getOneFigurine: (id, callback)=> { 
         
 
