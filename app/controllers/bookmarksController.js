@@ -7,19 +7,32 @@ const bookmarksController = {
   tva: 20,
   shipping: 5,
 
+
+
   // méthode pour afficher le panier
   bookmarksPage: (request, response) => {
 
     const favoris = request.session.bookmarks;
     let priceArray = [];
 
-    if (favoris.length>1) {
-      const priceItem = favoris.reduce((a, b) => (a.price + b.price));
-      const ItemWithTva = ((priceItem/100)*bookmarksController.tva)+priceItem;
-      const ItemWithTvaShipping = ItemWithTva+bookmarksController.shipping;
-
-      priceArray.push({priceItem, ItemWithTva, ItemWithTvaShipping});
+    if (favoris.length==1) {
       
+     priceArray.push({price:favoris[0].price});
+     const totalTva= (priceArray[0].price/100)*bookmarksController.tva;
+     const totalWithTva = totalTva+priceArray[0].price;
+     const totalWithTvaShipping = totalWithTva+bookmarksController.shipping;
+
+     priceArray.push({totalTva, totalWithTva, totalWithTvaShipping});
+
+      }if (favoris.length>1) {
+
+        priceArray.push(favoris.reduce((a, b) => ({price: a.price + b.price})));
+        const totalTva= (priceArray[0].price/100)*bookmarksController.tva;
+        const totalWithTva = totalTva+priceArray[0].price;
+        const totalWithTvaShipping = totalWithTva+bookmarksController.shipping;
+
+        priceArray.push({totalTva, totalWithTva, totalWithTvaShipping});
+        
       };
 
     console.log(favoris);
