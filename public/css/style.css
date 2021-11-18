@@ -8,9 +8,10 @@ body {
   background-color:rgb(163, 163, 163);
 }
 
-.navbar a {
+.navbar a, .card-name, .link-add-bookmarks, .btn-outline-ofig  {
   color :rgb(43, 43, 43);
 }
+
 
 .navbar .nav-item.active {
   font-weight: bold;
@@ -22,16 +23,16 @@ body {
 }
 
 .link-add-bookmarks {
+
   font-size: 0.8em;
   background-color: rgb(167, 167, 167);
   border-radius: 20px;
-  padding: 8px;
+  padding: 6px;
   float: right;
 
 }
 
 .btn-outline-ofig {
-  color: rgb(43, 43, 43);
   border-color: rgb(43, 43, 43);
 }
 
@@ -46,26 +47,26 @@ body {
   /* pourquoi 185px : 65 de margin-top du body, + 120 de hauteur du footer */
 }
 
-.badge-category {
-  position: absolute;
-  top: 15px;
-  left: 15px;
+
+.badge {
+  color: rgb(240, 240, 240);
+  border-radius: 20px;
 }
 
-.badge-gentil {
-  background-color: green;
-  color: wheat;
+.badge-montagne {
+  background-color: rgba(0, 128, 0,  0.705);
+ 
 }
 
-.badge-méchant,
-.badge-mechant {
-  background-color: red;
-  color: wheat;
+
+.badge-polué {
+  background-color: rgba(255, 0, 0, 0.705);
+  
 }
 
-.badge-animal {
-  background-color: blue;
-  color: wheat;
+.badge-asiatique {
+  background-color: rgba(0, 0, 255,  0.705);
+  
 }
 
 .img-cart-list {
@@ -110,7 +111,7 @@ table.table tbody tr td {
   margin-left: 15px;
 }
 
-.carousel-inner{
+#carousel-contact{
   width:40%;
   max-height: auto;
 }

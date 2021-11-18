@@ -46,10 +46,9 @@ const bookmarksController = {
         
       };
 
-    console.log(favoris);
-    console.log(priceArray);
+
     
-    response.render("favoris",{favoris : favoris, priceArray});
+    response.render("favoris",{favoris , priceArray});
   },
 
   bookmarksAddFigurine: (request, response)=>{

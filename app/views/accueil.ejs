@@ -18,18 +18,18 @@
               <div class="card h-100">
                 <a href="/article/<%= iteratorInfo.id %>" itemprop="url">
                   <img class="card-img-top" src="./images/<%=iteratorInfo.name.toLowerCase()%>/<%= iteratorInfo.name.toLowerCase()+1 %>.jpg" alt="">
-                  <h3 class="badge-category badge badge-pill badge-<%= iteratorInfo.category.toLowerCase() %>" itemprop="category"> <%= iteratorInfo.category %> </h3>
                 </a>
                 <div class="card-body">
                   <h2 class="h4 card-title">
-                    <a href="/article/<%= iteratorInfo.id %>"><%= iteratorInfo.name %></a>
+                    <a href="/article/<%= iteratorInfo.id %>" class="card-name"><%= iteratorInfo.name %></a>
                   </h2>
+                  <h3 class="badge-category badge badge-pill badge-<%= iteratorInfo.category.toLowerCase() %>" itemprop="category"> <%= iteratorInfo.category %> </h3>
                   <div class="h5">$<%= iteratorInfo.price %></div>
                   <p class="card-text"><%= iteratorInfo.description %></p>
                 </div>
                 <div class="card-footer">
                   <span class="small text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                  <a href="/bookmarks/add/<%= iteratorInfo.id %>" class="link-add-bookmarks">+ Ajouter aux favoris</a>
+                  <a href="/bookmarks/add/<%= iteratorInfo.id %>" class="link-add-bookmarks">Ajouter au Panier</a>
                 </div>
               </div>
 
