@@ -41,19 +41,27 @@
               </tr>
               <% } %>
 
-              <%  %>
+              <% for (const iteratorArray of priceArray) { %>
+              <tr>
+                <td>
+                  <p>Total HT</p>
+                </td>
+                  <td> $<%= iteratorArray.price %></td>
+              </tr>
+
+
               <tr>
                 <td>
                   <p>TVA</p>
                 </td>
-                  <td> <%= favoris.tva %></td>
-                </tr>
-              <tr>
+                  <td> $<%= iteratorArray.totalTva %></td>
+              </tr>
 
+              <tr>
                 <td>
                   <p>Frais de livraison</p>
                 </td>
-                <td><%= favoris.shipping %></td>
+                <td>$<%= iteratorArray.shipping %></td>
               </tr>
 
 
@@ -61,11 +69,16 @@
 
             <tfoot>
               <tr>
-                <td>Total</td>
+                <td>
+                  <p>Total</p>
+                </td>
+                <td>$<%=iteratorArray.totalWithTvaShipping %></td>
               </tr>
             </tfoot>
-          </table>
 
+         
+          <% } %>
+        </table>
           <div class="row">
             <div class="col text-right">
                 <a class="btn btn-success" href="/">

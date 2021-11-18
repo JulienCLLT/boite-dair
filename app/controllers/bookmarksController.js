@@ -22,7 +22,13 @@ const bookmarksController = {
      const totalWithTva = totalTva+priceArray[0].price;
      const totalWithTvaShipping = totalWithTva+bookmarksController.shipping;
 
-     priceArray.push({totalTva, totalWithTva, totalWithTvaShipping});
+     priceArray[0].totalTva =totalTva;
+     priceArray[0].totalWithTva = totalWithTva;
+     priceArray[0].totalWithTvaShipping =totalWithTvaShipping;
+     priceArray[0].shipping = bookmarksController.shipping;
+     
+
+     //priceArray.push({totalTva, totalWithTva, totalWithTvaShipping});
 
       }if (favoris.length>1) {
 
@@ -31,14 +37,19 @@ const bookmarksController = {
         const totalWithTva = totalTva+priceArray[0].price;
         const totalWithTvaShipping = totalWithTva+bookmarksController.shipping;
 
-        priceArray.push({totalTva, totalWithTva, totalWithTvaShipping});
+        priceArray[0].totalTva =totalTva;
+        priceArray[0].totalWithTva = totalWithTva;
+        priceArray[0].totalWithTvaShipping =totalWithTvaShipping;
+        priceArray[0].shipping = bookmarksController.shipping;
+
+        // priceArray.push({totalTva, totalWithTva, totalWithTvaShipping});
         
       };
 
     console.log(favoris);
     console.log(priceArray);
     
-    response.render("favoris",{favoris : favoris});
+    response.render("favoris",{favoris : favoris, priceArray});
   },
 
   bookmarksAddFigurine: (request, response)=>{
