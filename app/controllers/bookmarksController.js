@@ -6,49 +6,43 @@ const bookmarksController = {
   tva: 20,
   shipping: 5,
 
+ algoShop : (favoris)=>{
 
+    let priceArray = [];
+
+      if (favoris.length==1) {
+        priceArray.push({price:favoris[0].price});
+      }else {
+        priceArray.push(favoris.reduce((a, b) => ({price: a.price + b.price})));
+      };
+
+      
+      priceArray[0].totalTva = (priceArray[0].price/100)*bookmarksController.tva;
+      priceArray[0].totalWithTva = priceArray[0].totalTva+priceArray[0].price;
+      priceArray[0].totalWithTvaShipping= priceArray[0].totalWithTva+bookmarksController.shipping;
+      
+      priceArray[0].shipping = bookmarksController.shipping;
+
+      return priceArray;
+    },
 
   // méthode pour afficher le panier
   bookmarksPage: (request, response) => {
-
-    const favoris = request.session.bookmarks;
-    let priceArray = [];
-
-    if (favoris.length==1) {
+    try {
+      const favoris = request.session.bookmarks;
       
-     priceArray.push({price:favoris[0].price});
-     const totalTva= (priceArray[0].price/100)*bookmarksController.tva;
-     const totalWithTva = totalTva+priceArray[0].price;
-     const totalWithTvaShipping = totalWithTva+bookmarksController.shipping;
-
-     priceArray[0].totalTva =totalTva;
-     priceArray[0].totalWithTva = totalWithTva;
-     priceArray[0].totalWithTvaShipping =totalWithTvaShipping;
-     priceArray[0].shipping = bookmarksController.shipping;
-     
-
- 
-
-      }if (favoris.length>1) {
-
-        priceArray.push(favoris.reduce((a, b) => ({price: a.price + b.price})));
-        const totalTva= (priceArray[0].price/100)*bookmarksController.tva;
-        const totalWithTva = totalTva+priceArray[0].price;
-        const totalWithTvaShipping = totalWithTva+bookmarksController.shipping;
-
-        priceArray[0].totalTva =totalTva;
-        priceArray[0].totalWithTva = totalWithTva;
-        priceArray[0].totalWithTvaShipping =totalWithTvaShipping;
-        priceArray[0].shipping = bookmarksController.shipping;
-
+      if (favoris.length>0) {
         
-        
-      };
+        const  priceArray = bookmarksController.algoShop(favoris);
+        response.render("favoris",{favoris , priceArray});
+      }else{
 
-
-    
-    response.render("favoris",{favoris , priceArray});
-  },
+          const priceArray = [];
+        response.render("favoris",{favoris , priceArray});
+      }
+    } catch (error) {
+      response.status(500).send(error);
+    }},
 
 
 
