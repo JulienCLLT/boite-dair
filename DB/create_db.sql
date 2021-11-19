@@ -13,21 +13,21 @@ CREATE TABLE IF NOT EXISTS "boite" (
 );
 
 INSERT INTO "boite"("id","name", "description", "size", "price", "category") VALUES
-(1,'geneve', 'Peut sentir le gruyère. Peut indique l’heure. La consommation en grande quantité peut provoquer une envie inexpliquée de blanchir de l’argent et d’échapper à l’impôt. Forte odeur d’argent à l’intérieur.Le produit est 100% bio. L’air frais de Genève, en Suisse, soulage le stress, guérit le mal du pays et aide à lutter contre la nostalgie. Il est fait par des mains attentives, toutes les descriptions sur la canœe sont en anglais.',88,86,'Montagne'),
+(1,'Geneve', 'Peut sentir le gruyère. Peut indique l’heure. La consommation en grande quantité peut provoquer une envie inexpliquée de blanchir de l’argent et d’échapper à l’impôt. Forte odeur d’argent à l’intérieur.Le produit est 100% bio. L’air frais de Genève, en Suisse, soulage le stress, guérit le mal du pays et aide à lutter contre la nostalgie. Il est fait par des mains attentives, toutes les descriptions sur la canœe sont en anglais.',88,150,'Montagne'),
 
-(2,'newyork', 'Le produit est 100% bio. L’air frais de New York soulage le stress, guérit le mal du pays, et aide à lutter contre la nostalgie. Il est fait par des mains prudentes, toutes les descriptions sur la boîte sont en anglais, également disponible dans 800 langues les plus couramment utilisées à New York.
-Peut contenir des traces de Bronx, Brooklyn, Queens, ou Staten Island..',388,86,'Polué'),
+(2,'Newyork', 'Le produit est 100% bio. L’air frais de New York soulage le stress, guérit le mal du pays, et aide à lutter contre la nostalgie. Il est fait par des mains prudentes, toutes les descriptions sur la boîte sont en anglais, également disponible dans 800 langues les plus couramment utilisées à New York.
+Peut contenir des traces de Bronx, Brooklyn, Queens, ou Staten Island..',88,80,'Polué'),
 
-(3,'paris', 'Attention! Peut contenir des traces de liberté, d’égalité et de fraternité.Le produit est 100% bio. L’air frais de Paris soulage le stress, guérit le mal du pays et aide à combattre la nostalgie. Il est fait par des mains prudentes, toutes les descriptions sur la boîte sont en anglais.',88,86,'Polué'),
+(3,'Paris', 'Attention! Peut contenir des traces de liberté, d’égalité et de fraternité.Le produit est 100% bio. L’air frais de Paris soulage le stress, guérit le mal du pays et aide à combattre la nostalgie. Il est fait par des mains prudentes, toutes les descriptions sur la boîte sont en anglais.',88,40,'Polué'),
 
-(4,'patagonia', 'Cela peut causer des conditions météorologiques extrêmes. Ne devrait pas contenir d’inclusions de CO2. Peut contenir des traces de squelettes fossilisés. La boîte peut ince vers l’avant jusqu’à 2mm par jour.Le produit est 100% bio. L’air frais en conserve de Patagonie soulage le stress, guérit des moments d’ennui, et aide à combattre la mélancolie. Oubliez les aimants, les tasses et les assiettes. Ramenez à la maison quelque chose que tout le monde aimera et posez des questions.
+(4,'Patagonia', 'Cela peut causer des conditions météorologiques extrêmes. Ne devrait pas contenir d’inclusions de CO2. Peut contenir des traces de squelettes fossilisés. La boîte peut ince vers l’avant jusqu’à 2mm par jour.Le produit est 100% bio. L’air frais en conserve de Patagonie soulage le stress, guérit des moments d’ennui, et aide à combattre la mélancolie. Oubliez les aimants, les tasses et les assiettes. Ramenez à la maison quelque chose que tout le monde aimera et posez des questions.
 ',88,86,'Montagne'),
 
-(5,'shanghai', 'Peut contenir des traces de Xintiandi, Science and Technology Museum et Qibao Ancient Town.
-Cela peut être livré par poste de pigeon sur demande.',88,86,'Asiatique'),
+(5,'Shanghai', 'Peut contenir des traces de Xintiandi, Science and Technology Museum et Qibao Ancient Town.
+Cela peut être livré par poste de pigeon sur demande.',88,15,'Asiatique'),
 
-(6,'tokyo', 'Contient des traces du mont Fuji. Cette canœur est conçue pour résister à un tremblement de terre de magnitude 9,0 ou plus. N’inspirez qu’avec votre masque.
-Bientôt disponible dans tous les distributeurs automatiques à travers le pays. Le produit est 100% bio. L’air frais de Tokyo soulage le stress, guérit le mal du pays et aide à lutter contre la nostalgie. Il est fait par des mains attentives, toutes les descriptions sur la canœe sont en anglais.',88,86,'Asiatique');
+(6,'Tokyo', 'Contient des traces du mont Fuji. Cette canœur est conçue pour résister à un tremblement de terre de magnitude 9,0 ou plus. N’inspirez qu’avec votre masque.
+Bientôt disponible dans tous les distributeurs automatiques à travers le pays. Le produit est 100% bio. L’air frais de Tokyo soulage le stress, guérit le mal du pays et aide à lutter contre la nostalgie. Il est fait par des mains attentives, toutes les descriptions sur la canœe sont en anglais.',88,50,'Asiatique');
 
 
 -- Review

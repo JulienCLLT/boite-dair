@@ -1,4 +1,3 @@
-const { request, response } = require('express');
 const dataMapper = require('../dataMapper');
 
 
@@ -23,7 +22,7 @@ const mainController = {
     response.render('contact')
   },
 
-  // méthode pour la page d'accueil
+
   homePage: (request, response) => {
 
         const allFigurineForDataMapper = (error, data)=>{
@@ -41,7 +40,7 @@ const mainController = {
 
   },
 
-  // méthode pour la page article
+
   articlePage: (request, response) => {
     
       const urlFound = request.params.id;
