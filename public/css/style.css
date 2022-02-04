@@ -7,13 +7,11 @@ body {
 :focus-visible{
   outline: 1px solid black;
   border-radius: 5px;
-  border-color: #030303;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.267), 0 0 8px rgba(0, 0, 0, 0.267)
 }
 
-.form-control:focus-visible, .btn:focus-visible {
+.form-control:focus-visible, .btn:focus-visible, :focus-visible {
   border-color: #030303;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.267), 0 0 8px rgba(0, 0, 0, 0.267) !important;
+  box-shadow: inset 0 1px 1px rgb(0, 0, 0), 0 0 8px rgb(116, 115, 115) !important;
 }
 
 .navbar {
@@ -100,6 +98,7 @@ table.table tbody tr td {
 }
 
 .card {
+  width: 15rem;
   box-shadow: -1px 3px 3px -2px rgba(0,0,0,0.75);
 }
 
@@ -127,6 +126,10 @@ table.table tbody tr td {
   width:40%;
   max-height: auto;
 }
+
+/* .card-img-top {
+  width: 4rem;
+} */
 
 
 
