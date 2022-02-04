@@ -48,4 +48,4 @@ npm install
 
 #### 4. Lancer l'application
 
-- Exécuter `npm run start` pour lancer l'API.
+- Exécuter `npm run start` pour lancer l'application
